@@ -1,7 +1,5 @@
 import { useState } from 'react';
 import { evaluate } from 'mathjs';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
 import './App.css';
 
 
@@ -81,14 +79,6 @@ function App() {
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
 
       <div className="App">
         <h1>This is a calculator</h1>
