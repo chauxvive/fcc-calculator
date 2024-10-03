@@ -17,6 +17,7 @@
   --mid3-color: #FDB08A;
   --light-color: #FDCEB4;
   --background: url("/assets/right_side.jpg"); 
+  
 }
 
 /* Dark theme (upside-down mode) */
@@ -29,6 +30,7 @@
   --mid3-color: #41CFF3;
   --light-color: #ECCEB7;
   --background: url("/assets/upside_down.jpg");
+  --font-family: 'Creepster', cursive;
 }
 
 @font-face {
@@ -101,7 +103,7 @@ h1 {
   width: 100%;
   padding: 20px;
   border: none;
-  background-color: var(--display-color); /* Display background */
+  background-color: var(--display-color); 
   color: var(--display-text);
   font-size: 36px;
   margin-bottom: 20px;
@@ -112,6 +114,7 @@ h1 {
 }
 
 .buttons {
+  font-family: var(--font-family);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
@@ -119,7 +122,7 @@ h1 {
 
 button {
   padding: 20px;
-  font-size: 24px;
+  font-size: 30px;
   border: none;
   border-radius: 10px;
   background-color: var(--mid2-color); /* Button background */
@@ -142,29 +145,6 @@ button:active {
 
 #upside-down {
   font-family: 'Benguiat', cursive;
-}
-
-.operator {
-  background-color: var(--mid1-color);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.operator.active {
-  background-color: var(--mid2-color);
-  box-shadow: 0 4px 10px rgba(255, 204, 128, 0.5);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.equal {
-  background-color: var(--mid1-color);
-}
-
-.equal:hover {
-  background-color: var(--dark-color);
-}
-
-.zero {
-  grid-column: span 2;
 }
 
 .buttons button {
