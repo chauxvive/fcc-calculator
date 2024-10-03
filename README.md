@@ -23,4 +23,4 @@ I am a Software Developer and marketing specialist out of Connecticut open to ne
 
 ### Technologies Used:
 
-HTML5, CSS3, JavaScript, React, and Vite
+HTML5, CSS3, Typescript, React, and Vite
