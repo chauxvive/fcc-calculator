@@ -1,50 +1,26 @@
-# React + TypeScript + Vite
+![Rocktzar logo](https://res.cloudinary.com/mpauldesigns/image/upload/c_scale,q_100,w_200/v1540421311/rocktzar_red.png)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Stranger Calc
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Project:
 
-## Expanding the ESLint configuration
+This is a double skinned calculator made in accordance with the Free Code Camp front end libraries path.
+I made this just in time for Spooky Season, because even your calculator should be appropriately spooky. 
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### The Problem:
 
-- Configure the top-level `parserOptions` property like this:
+* Objective: Build an app that is functionally similar to this: https://javascript-calculator.freecodecamp.rocks/.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+* Fulfill the below user stories and get all of the tests to pass. Use whichever libraries or APIs you need. Give it your own personal style.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+* Must be aesthetically pleasing and use a library, in my case, React + Vite. 
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### Who am I?
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+I am a Software Developer and marketing specialist out of Connecticut open to new roles.
+
+### Technologies Used:
+
+HTML5, CSS3, JavaScript, React, and Vite
