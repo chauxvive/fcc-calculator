@@ -9,6 +9,8 @@
 This is a double skinned calculator made in accordance with the Free Code Camp front end libraries path.
 I made this just in time for Spooky Season, because even your calculator should be appropriately spooky. 
 
+[Check it out here:] (https://chauxvive.github.io/fcc-calculator/)
+
 ### The Problem:
 
 * Objective: Build an app that is functionally similar to this: https://javascript-calculator.freecodecamp.rocks/.
