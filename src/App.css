@@ -5,38 +5,160 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Define default and toggle themes using CSS variables */
+
+/* Default theme (light mode) */
+.light-theme {
+  --display-color: #f7e7de;
+  --display-text: #0C0403;
+  --dark-color: #342D25;
+  --mid1-color: #b24a1d;
+  --mid2-color: #FB762D;
+  --mid3-color: #FDB08A;
+  --light-color: #FDCEB4;
+  --background: url("/assets/right_side.jpg"); 
+  
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Dark theme (upside-down mode) */
+.dark-theme {
+  --display-color: #0C0403;
+  --display-text: #ffffff;
+  --dark-color: #0C0403;
+  --mid1-color: #113F5C;
+  --mid2-color: #227AAC;
+  --mid3-color: #41CFF3;
+  --light-color: #ECCEB7;
+  --background: url("/assets/upside_down.jpg");
+  --font-family: 'Creepster', cursive;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: 'Benguiat'; 
+  src: url('./fonts/Benguiat_Bold.woff2') format('woff2');  /* WOFF2 format */
+  font-weight: normal;
+  font-style: normal;
 }
 
-.card {
-  padding: 2em;
+.noise {
+  position: relative;
+  background-color: #fff; /* Base color */
 }
 
-.read-the-docs {
-  color: #888;
+.noise::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.108); /* Adjust for opacity */
+  filter: blur(30px); /* Adjust blur to create a softer noise */
+  pointer-events: none; /* Ensure it doesn't block clicks */
+}
+
+/* Apply the variables */
+body {
+  font-family: "Helvetica Neue", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--mid1-color); /* Adjust based on theme */
+  margin: 0;
+  transition: background-color 0.3s ease;
+}
+
+.calcContainer {
+  background-color: var(--mid3-color)  ;
+  background-image: linear-gradient(var(--light-color) 20%, var(--mid-color));
+  padding: 2rem;
+  border-radius: 50px;
+  display: flex;
+  background-image: var(--background); 
+  background-size: cover; 
+  background-position: center; 
+}
+
+h1 {
+  font-family: 'Benguiat', cursive;
+  font-size: 3.2em;
+  line-height: 1.1;
+  color: var(--display-text);
+  padding: 2rem;
+}
+
+.calculator {
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: var(--mid1-color); /* Main container background */
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  width: 340px;
+}
+
+.display {
+  width: 100%;
+  padding: 20px;
+  border: none;
+  background-color: var(--display-color); 
+  color: var(--display-text);
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-align: right;
+  border-radius: 10px;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+}
+
+.buttons {
+  font-family: var(--font-family);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  padding: 20px;
+  font-size: 30px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--mid2-color); /* Button background */
+  color: black; /* Ensure text is black */
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s, box-shadow 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+}
+
+button:hover {
+  background-color: var(--mid3-color); /* Hover state */
+}
+button:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#upside-down {
+  font-family: 'Benguiat', cursive;
+}
+
+.buttons button {
+  height: 70px;
+}
+
+.display {
+  height: 80px;
+  font-size: 38px;
+  transition: all 0.3s ease-in-out;
+}
+
+button.key-active {
+  background-color: var(--mid1-color);
+  transform: scale(0.98);
+  transition: background-color 0.2s, transform 0.1s;
 }
